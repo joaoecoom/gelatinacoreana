@@ -1,0 +1,321 @@
+/* =====================================================
+   SALUD - Landing Page VSL
+   Mobile-first, otimizada para velocidade
+   ===================================================== */
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+   BLOCO 1: Header
+   ===================================================== */
+.header {
+    background-color: #A31621;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.header__title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   BLOCO 2: Headline
+   ===================================================== */
+.headline {
+    background-color: #ffffff;
+    padding: 1.25rem 1rem;
+    text-align: left;
+}
+
+.headline__tag {
+    display: inline;
+    color: #B8191A;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.headline__title {
+    display: inline;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+/* =====================================================
+   RESPONSIVE - Desktop
+   ===================================================== */
+@media (min-width: 768px) {
+
+    /* Header */
+    .header {
+        padding: 1.25rem 2rem;
+    }
+
+    .header__title {
+        font-size: 1.75rem;
+    }
+
+    /* Headline */
+    .headline {
+        padding: 1.5rem 3rem;
+    }
+
+    .headline__tag {
+        font-size: 1.2rem;
+    }
+
+    .headline__title {
+        font-size: 1.2rem;
+    }
+}
+
+/* =====================================================
+   BLOCO 3: VSL (Video Sales Letter)
+   ===================================================== */
+.vsl {
+    background-color: #ffffff;
+    padding: 1.5rem 1rem 1rem;
+    text-align: center;
+}
+
+.vsl__container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.vsl__counter {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.vsl__counter-number {
+    color: #B8191A;
+    font-weight: 700;
+}
+
+.vsl__counter-text {
+    color: #666666;
+    font-weight: 400;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .vsl {
+        padding: 2rem 2rem 1.5rem;
+    }
+
+    .vsl__container {
+        max-width: 500px;
+    }
+
+    .vsl__counter {
+        font-size: 1rem;
+    }
+}
+
+
+/* =====================================================
+   BLOCO 4: Provas (Facebook Style Comments - Clean/Mobile)
+   ===================================================== */
+.provas {
+    background-color: #ffffff;
+    padding: 0;
+    max-width: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.fb-comments-container {
+    background-color: #fff;
+    padding: 15px;
+}
+
+/* Header: "Mostrando X de Y comentarios" */
+.fb-comments-header {
+    border-bottom: 1px solid #e9ebee;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fb-comments-header svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Comment Item */
+.fb-comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+/* Threaded/Reply Comment */
+.fb-comment.fb-reply {
+    margin-left: 50px;
+    /* Indent */
+    margin-top: -5px;
+    margin-bottom: 12px;
+    border-left: 2px solid #efefef;
+    /* Vertical gray line for thread */
+    padding-left: 10px;
+}
+
+.fb-avatar {
+    margin-right: 12px;
+    flex-shrink: 0;
+    z-index: 2;
+    /* stay above lines */
+}
+
+.fb-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Smaller avatar for replies */
+.fb-comment.fb-reply .fb-avatar img {
+    width: 32px;
+    height: 32px;
+}
+
+.fb-content {
+    flex: 1;
+}
+
+/* Name and Text - No Bubble Container in this style */
+.fb-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: #050505;
+    /* Black text for name */
+    margin-bottom: 2px;
+    display: block;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.fb-text {
+    font-size: 14px;
+    color: #050505;
+    line-height: 1.35;
+    word-wrap: break-word;
+    margin-bottom: 6px;
+}
+
+/* Images inside comments (Before/After) */
+.fb-comment-image {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    /* Allow side-by-side if multiple */
+    gap: 2px;
+}
+
+.fb-comment-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Action links: Me gusta · Responder · Time */
+.fb-actions {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #65676b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fb-action-link {
+    font-weight: 600;
+    color: #65676b;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fb-action-link:hover {
+    text-decoration: none;
+    color: #65676b;
+}
+
+.fb-time {
+    font-weight: 400;
+    color: #65676b;
+}
+
+/* Reactions Row (Below actions) */
+.fb-reactions-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.fb-reactions-icons {
+    display: flex;
+    align-items: center;
+    /* overlap icons slightly */
+}
+
+.fb-reactions-icons svg,
+.fb-reactions-icons img {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: -4px;
+    /* Stack overlap */
+    background: #fff;
+}
+
+.fb-reactions-count {
+    font-size: 13px;
+    color: #65676b;
+    margin-left: 6px;
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+    .provas {
+        padding: 2rem 3rem;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
