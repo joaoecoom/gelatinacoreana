@@ -794,6 +794,28 @@
                 scheduleUpdate();
             })();
         </script>
+        <!-- CartPanda Validation Script (Hidden) -->
+        <div
+            style="display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;">
+            <script type="text/javascript"
+                src="https://assets.mycartpanda.com/cartx-ecomm-ui-assets/js/cpsales.js"></script>
+        </div>
+
+        <style>
+            /* Suppress any potential CartPanda/Cartx notification popups */
+            .cartpanda-sales-notification,
+            .cartx-sales-notification,
+            #cpsales-container,
+            [class*="cartpanda-"],
+            [id*="cpsales-"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+                transform: scale(0) !important;
+            }
+        </style>
 </body>
+
 
 </html>
